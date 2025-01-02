@@ -145,14 +145,12 @@
             <script>
                 // Fetch news content from API using CORS proxy
                 const apiUrl = 'https://api.aviatorjonah.com/api/blogposts';
-                const corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
-                fetch(corsProxy + apiUrl, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                        'X-Requested-With': 'XMLHttpRequest'  // Required by cors-anywhere
-                    }
+                fetch(apiUrl, {
+                  method: 'GET',
+                  headers: {
+                    'Accept': 'application/json',
+                  }
                 })
                     .then(response => {
                         if (!response.ok) {
