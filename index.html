@@ -1,81 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="utf-8">
     <title>AviatorJonah - Coming Soon</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="./style.css" rel="stylesheet">
-    <script>
-        if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
-            document.querySelector('html').classList.remove('dark');
-        } else {
-            document.querySelector('html').classList.add('dark');
-        }
-    </script>
 </head>
 
-<body class="font-inter antialiased bg-[#1b264f] text-gray-800 dark:bg-gray-900 dark:text-gray-200 tracking-tight">
+<body class="font-inter antialiased bg-gray-900 text-white tracking-tight">
 
     <!-- Page wrapper -->
     <div class="relative flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-
-        <!-- Bg coloured shapes -->
-        <div class="absolute inset-y-0 w-[1102px] left-1/2 -translate-x-1/2 -z-10 pointer-events-none blur-3xl"
-            aria-hidden="true">
-            <!-- Remove the colored shapes -->
-        </div>
 
         <!-- Site header -->
         <header class="absolute top-4 md:top-6 w-full z-30 pb-4 md:pb-6">
             <div class="px-4 sm:px-6">
                 <div class="max-w-3xl mx-auto">
-                    <div class="relative flex items-center justify-between gap-x-2 h-12 bg-white/90 dark:bg-gray-800/90 rounded-lg px-3 shadow">
+                    <div class="relative flex items-center justify-center gap-x-2 h-12 bg-gray-800/90 rounded-lg px-3 shadow">
 
                         <!-- Site branding -->
-                        <div class="flex-1">
+                        <div class="absolute left-3">
                             <!-- Logo -->
-                            <a href="index.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-                                    <path class="fill-[#1b264f]"
-                                        d="M16.975 3.036c6.402.475 11.514 5.586 11.99 11.989H24.32a7.345 7.345 0 0 1-7.345-7.345V3.036Zm-1.95 21.284v4.644c-6.402-.475-11.514-5.587-11.989-11.99H7.68a7.345 7.345 0 0 1 7.345 7.346Z" />
-                                    <path class="fill-[#1b264f]"
-                                        d="M3.036 15.025c.475-6.403 5.587-11.514 11.99-11.99V7.68a7.345 7.345 0 0 1-7.346 7.345H3.036Zm21.284 1.95h4.644c-.475 6.402-5.586 11.514-11.989 11.989V24.32a7.345 7.345 0 0 1 7.345-7.345Z" />
+                            <a href="index.html" aria-label="AviatorJonah">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                                    <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
                                 </svg>
                             </a>
                         </div>
 
                         <!-- Navigation links -->
-                        <nav class="flex justify-center">
+                        <nav class="flex">
                             <ul class="flex items-center sm:gap-x-3 text-sm font-medium">
                                 <li>
-                                    <a class="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-[#1b264f]/10 dark:hover:bg-gray-800/30 py-1.5 px-3"
+                                    <a class="text-gray-200 rounded-lg hover:bg-gray-800/30 py-1.5 px-3"
                                         href="updates.html">Pre-Launch Updates</a>
                                 </li>
                                 <li>
-                                    <a class="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-[#1b264f]/10 dark:hover:bg-gray-800/30 transition-colors py-1.5 px-3"
-                                        href="faq.html">FAQ</a>
-                                </li>
-                                <li>
-                                    <a class="text-gray-800 dark:text-gray-200 rounded-lg hover:bg-[#1b264f]/10 dark:hover:bg-gray-800/30 transition-colors py-1.5 px-3"
+                                    <a class="text-gray-200 rounded-lg hover:bg-gray-800/30 transition-colors py-1.5 px-3"
                                         href="contact.html">Need to Contact Us?</a>
                                 </li>
                             </ul>
                         </nav>
-
-                        <!-- Dark / Light mode toggle -->
-                        <div class="flex-1 flex justify-end">
-                            <input type="checkbox" name="light-switch" id="light-switch" class="light-switch sr-only" />
-                            <label class="cursor-pointer p-2" for="light-switch">
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="fill-gray-400 dark:fill-gray-500"
-                                        d="M9 0H7v2h2V0ZM14.294 3.052 12.88 1.637 11.466 3.05l1.413 1.414 1.415-1.413ZM16 7h-2v2h2V7ZM11.535 13.02l1.415 1.413 1.414-1.415-1.415-1.413-1.414 1.414ZM9 14H7v2h2v-2ZM1.566 12.948l1.414 1.415 1.415-1.413-1.414-1.415-1.415 1.413ZM2 7H0v2h2V7ZM4.465 3.12 3.05 1.707 1.636 3.12l1.415 1.414L4.465 3.12Z" />
-                                    <path class="fill-gray-800 dark:fill-gray-200"
-                                        d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
-                                </svg>
-                                <span class="sr-only">Switch to light / dark version</span>
-                            </label>
-                        </div>
 
                     </div>
                 </div>
@@ -93,14 +59,14 @@
                             <div class="text-center">
 
                                 <div class="mb-5">
-                                    <div class="relative text-sm font-medium text-gray-700 bg-white dark:bg-gray-700 inline-flex rounded-lg whitespace-nowrap px-3 py-[3px] tracking-normal">
-                                        <span class="relative text-gray-800 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-[#1b264f] dark:to-[#1b264f]">AviatorJonah<span class="text-gray-300 mx-1">·</span> Coming Soon</span>
+                                    <div class="relative text-sm font-medium text-white bg-gray-700 inline-flex rounded-lg whitespace-nowrap px-3 py-[3px] tracking-normal">
+                                        <span class="relative">AviatorJonah<span class="text-gray-300 mx-1">·</span> Coming Soon</span>
                                     </div>
                                 </div>
 
-                                <h1 class="font-inter-tight text-5xl md:text-6xl font-bold text-white dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-[#1b264f] dark:to-gray-200 pb-4">
+                                <h1 class="font-inter-tight text-5xl md:text-6xl font-bold text-white pb-4">
                                     We're Making Learning Easy</h1>
-                                <p class="text-lg text-gray-200 dark:text-gray-400">
+                                <p class="text-lg text-white">
                                     AviatorJonah is coming soon. Our promise? Making learning easy & accessible. Sign
                                     up below to be the first to know when we launch.
                                 </p>
@@ -115,19 +81,19 @@
                                         <div>
                                             <label class="sr-only" for="email">Email</label>
                                             <div class="relative">
-                                                <div class="absolute inset-y-0 left-0 text-gray-500/70 dark:text-gray-400/70 pl-4 flex items-center pointer-events-none">
+                                                <div class="absolute inset-y-0 left-0 text-gray-400/70 pl-4 flex items-center pointer-events-none">
                                                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg"
                                                         width="16" height="14">
                                                         <path
                                                             d="M14 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm0 12H2V5.723l5.504 3.145a.998.998 0 0 0 .992 0L14 5.723V12Zm0-8.58L8 6.849 2 3.42V2h12v1.42Z" />
                                                     </svg>
                                                 </div>
-                                                <input id="email" class="form-input text-sm w-full pl-10 pr-4"
+                                                <input id="email" class="form-input text-sm w-full pl-10 pr-4 border-2 border-[#1b264f] rounded-md focus:ring-[#1b264f] focus:border-[#1b264f] bg-gray-800 text-white"
                                                     type="email" placeholder="Your email..." required />
                                             </div>
                                         </div>
                                         <div>
-                                            <button class="btn text-gray-100 bg-[#1b264f] hover:bg-[#1b264f]/80 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-white w-full">Join
+                                            <button class="btn text-white bg-[#1b264f] hover:bg-[#1b264f]/80 w-full">Join
                                                 The Waitlist</button>
                                         </div>
                                     </div>
@@ -181,8 +147,8 @@
             <div class="px-4 sm:px-6">
                 <div class="max-w-3xl mx-auto">
                     <div class="text-center py-8">
-                        <p class="text-sm text-gray-200 dark:text-gray-400">&copy; 2025 AviatorJonah, LLC - Built by <a
-                                class="font-medium text-[#1b264f] hover:underline"
+                        <p class="text-sm text-white">&copy; 2025 AviatorJonah, LLC - Built by <a
+                                class="font-medium text-white hover:underline"
                                 href="https://instagram.com/AviatorJonah" target="_blank">@AviatorJonahHQ</a></p>
                     </div>
                 </div>
@@ -197,3 +163,4 @@
 </body>
 
 </html>
+
