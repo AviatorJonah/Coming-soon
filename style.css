@@ -1840,6 +1840,10 @@ input[type="search"]::-webkit-search-results-decoration {
   bottom: 0px;
 }
 
+.right-3{
+  right: 0.75rem;
+}
+
 .z-30{
   z-index: 30;
 }
@@ -2020,6 +2024,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .h-3{
   height: 0.75rem;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .max-h-60{
@@ -2365,6 +2373,10 @@ input[type="search"]::-webkit-search-results-decoration {
   border-top-width: 1px;
 }
 
+.border-b{
+  border-bottom-width: 1px;
+}
+
 .border-none{
   border-style: none;
 }
@@ -2583,6 +2595,11 @@ input[type="search"]::-webkit-search-results-decoration {
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-12{
@@ -3366,6 +3383,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .md\:grid-rows-\[auto_auto\]{
     grid-template-rows: auto auto;
+  }
+
+  .md\:justify-center{
+    justify-content: center;
   }
 
   .md\:justify-between{
