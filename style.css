@@ -1844,6 +1844,10 @@ input[type="search"]::-webkit-search-results-decoration {
   right: 0.75rem;
 }
 
+.right-0{
+  right: 0px;
+}
+
 .z-30{
   z-index: 30;
 }
