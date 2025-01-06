@@ -200,34 +200,6 @@
 </footer>
 </div> <!-- Close the page wrapper div -->
 
-        <!-- Changelog Box -->
-        <div id="changelog-box" class="fixed bottom-4 left-4 w-64 bg-white rounded-lg shadow-lg overflow-hidden z-50">
-            <div id="changelog-header" class="bg-[#1b264f] text-white p-3 flex justify-between items-center cursor-pointer">
-                <h3 class="font-bold text-lg">Changelog</h3>
-                <div class="flex items-center">
-                    <svg id="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
-                        <polyline points="18 15 12 9 6 15"></polyline>
-                    </svg>
-                    <button id="close-changelog" class="ml-2 text-white hover:text-gray-200">✕</button>
-                </div>
-            </div>
-            <div id="changelog-content" class="p-4 max-h-60 overflow-y-auto">
-                <ul class="space-y-2">
-                    <li>
-                        <span class="font-semibold">v1.2.0:</span> Added new feature X
-                    </li>
-                    <li>
-                        <span class="font-semibold">v1.1.1:</span> Fixed bug in Y module
-                    </li>
-                    <li>
-                        <span class="font-semibold">v1.1.0:</span> Improved performance of Z
-                    </li>
-                    <!-- Add more changelog items here -->
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <script src="./js/vendors/alpinejs.min.js" defer></script>
     <script src="./js/main.js"></script>
     <script>
@@ -278,44 +250,6 @@
                 responseMessage.style.display = 'block';
                 responseMessage.style.color = 'red';
                 responseMessage.textContent = 'An error occurred. Please try again.';
-            }
-        });
-    </script>
-    <!-- Changelog Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const changelogBox = document.getElementById('changelog-box');
-            const changelogHeader = document.getElementById('changelog-header');
-            const changelogContent = document.getElementById('changelog-content');
-            const chevronIcon = document.getElementById('chevron-icon');
-            const closeButton = document.getElementById('close-changelog');
-
-            function toggleChangelog() {
-                if (changelogContent.style.display === 'none' || changelogContent.style.display === '') {
-                    changelogContent.style.display = 'block';
-                    chevronIcon.classList.add('rotate-180');
-                } else {
-                    changelogContent.style.display = 'none';
-                    chevronIcon.classList.remove('rotate-180');
-                }
-            }
-
-            function closeChangelog() {
-                changelogBox.style.display = 'none';
-                Cookies.set('changelogClosed', 'true', { expires: 7 });
-            }
-
-            changelogHeader.addEventListener('click', toggleChangelog);
-            closeButton.addEventListener('click', function(e) {
-                e.stopPropagation();
-                closeChangelog();
-            });
-
-            // Check if the changelog should be visible
-            if (Cookies.get('changelogClosed')) {
-                changelogBox.style.display = 'none';
-            } else {
-                changelogContent.style.display = 'none';
             }
         });
     </script>
